@@ -4,7 +4,7 @@ function App() {
       <div className="mx-2 text-center font-mono">
         <p className="mb-2 text-2xl font-bold underline sm:text-4xl">Liam Luna</p>
         <p className="mb-2 text-xs sm:text-xl">Software Engineer | Backend | Go | TypeScript</p>
-        <div className="mb-2 flex flex-col gap-1 sm:flex-row sm:justify-center sm:gap-6">
+        <div className="mb-1 flex flex-col gap-1 sm:mb-2 sm:flex-row sm:justify-center sm:gap-6">
           <a
             href="https://linkedin.com/in/liamluna"
             className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base"
