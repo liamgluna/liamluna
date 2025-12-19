@@ -5,6 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/ll-v2.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liam Luna</title>
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem('theme');
+          const preferred =
+            stored === 'dark' || stored === 'light'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+
+          document.documentElement.classList.toggle('dark', preferred === 'dark');
+        } catch {
+          // no-op
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
