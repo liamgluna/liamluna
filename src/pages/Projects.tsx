@@ -74,7 +74,7 @@ export function Projects() {
             }`}
           >
             <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-              <div className="overflow-hidden rounded-md border border-zinc-200/70 bg-zinc-100/70 sm:w-56 sm:shrink-0 dark:border-zinc-700/60 dark:bg-black/20">
+              <div className="overflow-hidden rounded-md border border-zinc-200/70 bg-zinc-100/70 sm:w-72 sm:shrink-0 dark:border-zinc-700/60 dark:bg-black/20">
                 <img
                   src={project.imageSrc}
                   alt={project.imageAlt}
