@@ -1,36 +1,28 @@
+import { Contact } from './pages/Contact';
+import { Home } from './pages/Home';
+import { Projects } from './pages/Projects';
+import { Link, Route, Routes } from 'react-router-dom';
+
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-800 text-zinc-100">
-      <div className="mx-2 text-center font-mono">
-        <p className="mb-2 text-2xl font-bold underline sm:text-4xl">Liam Luna</p>
-        <p className="mb-2 text-xs sm:text-xl">Software Engineer | Backend | Go | TypeScript</p>
-        <div className="mb-1 flex flex-col gap-1 sm:mb-2 sm:flex-row sm:justify-center sm:gap-6">
-          <a
-            href="https://linkedin.com/in/liamluna"
-            className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/liamgluna"
-            className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://bsky.app/profile/liamluna.com"
-            className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base"
-          >
-            Bluesky
-          </a>
-        </div>
-        <a
-          href="mailto:liamgluna@gmail.com"
-          className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base"
-        >
-          liamgluna@gmail.com
-        </a>
-      </div>
+    <div className="flex min-h-screen flex-col bg-zinc-800 text-zinc-100">
+      <nav className="mx-auto flex max-w-3xl items-center justify-center gap-6 px-4 py-12 font-mono">
+        <Link to="/" className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base">
+          Home
+        </Link>
+        <Link to="/projects" className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base">
+          Projects
+        </Link>
+        <Link to="/contact" className="text-xs text-zinc-400 hover:text-zinc-200 sm:text-base">
+          Contact
+        </Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
