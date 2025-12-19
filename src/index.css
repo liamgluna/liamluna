@@ -1,1 +1,42 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes intro-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-fade-up {
+  opacity: 0;
+  animation: intro-fade-up 600ms ease-out forwards;
+}
+
+.intro-delay-1 {
+  animation-delay: 120ms;
+}
+
+.intro-delay-2 {
+  animation-delay: 220ms;
+}
+
+.intro-delay-3 {
+  animation-delay: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-fade-up,
+  .intro-delay-1,
+  .intro-delay-2,
+  .intro-delay-3 {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
