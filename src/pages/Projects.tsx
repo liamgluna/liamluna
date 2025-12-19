@@ -29,7 +29,7 @@ const PROJECTS = [
   {
     title: 'Kolehiyo',
     description:
-      'A catalog of universities in the Philippines, with a React + TypeScript frontend and a Go backend.',
+      'A catalog of universities in the Philippines, with a React + TypeScript frontend, a Go backend, and a PostgreSQL database.',
     tech: ['React', 'TypeScript', 'Go', 'PostgreSQL'],
     imageSrc: '/kolehiyo.png',
     imageAlt: 'Kolehiyo catalog screenshot',
