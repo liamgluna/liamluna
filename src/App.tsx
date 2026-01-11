@@ -45,12 +45,12 @@ function App() {
               >
                 Projects
               </Link>
-              <Link
+              {/* <Link
                 to="/contact"
                 className="text-sm text-zinc-600 hover:text-zinc-900 sm:text-base dark:text-zinc-400 dark:hover:text-zinc-200"
               >
                 Contact
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -74,7 +74,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </div>
   );
